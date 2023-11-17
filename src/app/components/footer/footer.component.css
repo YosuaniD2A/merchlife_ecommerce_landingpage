@@ -1,0 +1,7 @@
+.fa-brands{
+    font-size: 30px;
+}
+
+.fa-brands:hover{
+    transform: scale(1.3);
+}

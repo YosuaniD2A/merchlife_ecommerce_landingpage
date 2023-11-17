@@ -1,0 +1,12 @@
+.navbar{
+    background-color: rgba(69, 69, 69, 0) !important;
+}
+
+.container-nav{
+    max-width: 90%;
+    margin: auto;
+}
+
+.nav-link:hover{
+    transform: scale(1.2);
+}
