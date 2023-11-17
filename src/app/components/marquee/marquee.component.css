@@ -1,0 +1,25 @@
+.marquee-container {
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+}
+
+.marquee {
+    display: block;
+    animation: marquee 10s linear infinite;
+    /* Ajusta la duración según tus preferencias */
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-200%);
+    }
+}
+
+p{
+    font-weight: 600;
+}

@@ -2,7 +2,8 @@
 .image-bg{
     background-image: url("../../../assets/images/background.jpg");
     background-size: cover;
-    background-position: top;
+    background-attachment: fixed;
+    background-position: top ;
     background-repeat: no-repeat;
     min-height: 100vh;
 }
