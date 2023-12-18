@@ -10,3 +10,18 @@
 .nav-link:hover{
     transform: scale(1.2);
 }
+
+
+@media (max-width: 570px) {
+.container-fluid{
+    justify-content: center !important;
+}
+
+}
+
+@media (max-width: 992px) {
+    .nav-social-media{
+        display: none;
+    }
+    
+}

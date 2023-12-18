@@ -1,0 +1,9 @@
+.section-services{
+    padding: 35px 0px;
+    background-color: rgb(238, 238, 238);
+}
+
+.container-services{
+    max-width: 90%;
+    margin: auto;
+}

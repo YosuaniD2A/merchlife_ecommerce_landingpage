@@ -7,6 +7,7 @@ import { NavegatorComponent } from './components/main/navegator/navegator.compon
 import { FooterComponent } from './components/footer/footer.component';
 import { MarqueeComponent } from './components/marquee/marquee.component';
 import { MainComponent } from './components/main/main.component';
+import { ServicesComponent } from './components/main/services/services.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { MainComponent } from './components/main/main.component';
     FooterComponent,
     MarqueeComponent,
     MainComponent,
+    ServicesComponent,
   ],
   imports: [
     AppRoutingModule,

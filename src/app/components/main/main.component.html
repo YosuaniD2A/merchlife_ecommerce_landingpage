@@ -2,8 +2,16 @@
     <div class="opacity-layer pt-3 d-flex flex-column" style="position: relative; z-index: 2;">
         <app-navegator style="position: relative; z-index: 3;"></app-navegator>
         <div class="container mb-4 mt-5 bg-light-trans p-5 align-items-center rounded-3 shadow-lg">
-            <div class="row flex-lg-row-reverse align-items-start g-5 py-5">
-                <div class="section-form col-10 col-sm-8 col-lg-6" [ngClass]="{'roll-in-blurred-right': activeForm}">
+            <div class="row flex-lg-row align-items-start g-5 py-5">
+                <div class="col-lg-6">
+                    <h1 class="text-light display-5 fw-bold text-body-emphasis lh-1 mb-3">Get & Sell your own Merch effortlessly</h1>
+                    <p class="lead text-light">Subscribe to our newsletter for exclusive insights and early access to Merchlife. Here, artists and brands can unleash their brand potential by selling custom clothing, unique wall-art, and drinkware.</p> 
+                    <p class="lead text-light">Don't miss out on turning your creative vision into a merchandise empire.</p>
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                        <button type="button" *ngIf="!activeForm" (click)="switchForm()" class="btn-lets btn-lg px-4 me-md-2">Let's go</button>
+                    </div>
+                </div>
+                <div class="section-form col-12 col-sm-8 col-lg-6" [ngClass]="{'roll-in-blurred-right': activeForm}">
                     <form class="row" action="">
                         <div class="col-sm-6 mb-3">
                             <label for="firstName" class="form-label text-light">First name</label>
@@ -20,7 +28,7 @@
                             </div>
                         </div>
                         <div class="col-12 mb-3">
-                            <label for="firstName" class="form-label text-light">Band name <small
+                            <label for="firstName" class="form-label text-light">Brand name <small
                                 class="">(Optional)</small></label>
                             <input type="text" class="form-control" id="firstName" placeholder="" value="" required="">
                             <div class="invalid-feedback">
@@ -55,16 +63,8 @@
                         </div>
                     </form>
                 </div>
-                <div class="col-lg-6">
-                    <h1 class="text-light display-5 fw-bold text-body-emphasis lh-1 mb-3">The Future of Dropshipping for Artists and Bands
-                        is coming!</h1>
-                    <p class="lead text-light">Join the forefront of merchandising innovation! Subscribe to our newsletter for exclusive insights and early access to Merchlife. Here, artists and bands can unleash their brand potential by selling custom clothing, unique wall-art, and bespoke drinkware.</p> 
-                    <p class="lead text-light">Don't miss out on turning your creative vision into a merchandise empire.</p>
-                    <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-                        <button type="button" *ngIf="!activeForm" (click)="switchForm()" class="btn-lets btn-lg px-4 me-md-2">Let's go</button>
-                    </div>
-                </div>
             </div>
         </div>
+        <app-services></app-services>
     </div>
 </div>
