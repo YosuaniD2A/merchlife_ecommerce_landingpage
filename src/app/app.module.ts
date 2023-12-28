@@ -8,6 +8,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { MarqueeComponent } from './components/marquee/marquee.component';
 import { MainComponent } from './components/main/main.component';
 import { ServicesComponent } from './components/main/services/services.component';
+import { ThanksComponent } from './components/thanks/thanks.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { ServicesComponent } from './components/main/services/services.component
     MarqueeComponent,
     MainComponent,
     ServicesComponent,
+    ThanksComponent,
   ],
   imports: [
     AppRoutingModule,

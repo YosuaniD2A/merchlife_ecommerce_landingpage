@@ -1,6 +1,6 @@
 
 .image-bg{
-    background-image: url("../../../assets/images/background2.png");
+    background-image: url("../../../assets/images/background3.png");
     background-size: cover;
     background-attachment: fixed;
     background-position: top ;
@@ -10,7 +10,7 @@
 
 .opacity-layer{
     min-height: 100vh;
-    background-color: rgba(47, 48, 47, 0.548);
+    background-color: rgba(47, 48, 47, 0.367);
 }
 
 .delimitador{

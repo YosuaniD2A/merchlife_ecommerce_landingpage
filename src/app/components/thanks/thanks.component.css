@@ -1,0 +1,29 @@
+.image-bg{
+    background-image: url("../../../assets/images/background2.png");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: top ;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+.opacity-layer{
+    min-height: 100vh;
+    background-color: rgba(47, 48, 47, 0.548);
+}
+
+.height-container{
+    height: calc(100vh - 160px);
+}
+
+.btn-lets{
+    padding: 10px 15px;
+    min-width: 250px;
+    background-color: #d5c214;
+    font-size: 20px;
+    font-weight: 700;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 1px 15px rgba(238, 217, 28, 0.478);    
+    transition: all 0.3s ease;
+}
