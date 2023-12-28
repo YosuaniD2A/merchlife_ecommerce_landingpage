@@ -12,59 +12,50 @@
                     </div>
                 </div>
                 <div class="section-form col-12 col-sm-8 col-lg-6" [ngClass]="{'roll-in-blurred-right': activeForm}">
-                    <form class="row" action="https://formsubmit.co/luis@smartprintsink.com" method="POST">
+                    <!-- <form class="row" action="https://formsubmit.co/luis@smartprintsink.com" method="POST"> -->
+                    <form class="row" [class.invalid-form]="invalidForm">
                         <div class="col-sm-6 mb-3">
                             <label for="firstName" class="form-label text-light">First name</label>
-                            <input type="text" name="firstName" class="form-control" id="firstName" placeholder="" value="" required="">
-                            <div class="invalid-feedback">
-                                Valid first name is required.
-                            </div>
+                            <input type="text" name="firstName" [(ngModel)]="formData.firstName" class="form-control" id="firstName" placeholder="" value="" required="">
                         </div>
                         <div class="col-sm-6 mb-3">
                             <label for="firstName" class="form-label text-light">Last name</label>
-                            <input type="text" name="lastName" class="form-control" id="firstName" placeholder="" value="" required="">
-                            <div class="invalid-feedback">
-                                Valid first name is required.
-                            </div>
+                            <input type="text" name="lastName" [(ngModel)]="formData.lastName" class="form-control" id="firstName" placeholder="" value="" required="">
                         </div>
                         <div class="col-12 mb-3">
                             <label for="firstName" class="form-label text-light">Brand name <small
                                 class="">(Optional)</small></label>
-                            <input type="text" name="brandName" class="form-control" id="firstName" placeholder="" value="" required="">
-                            <div class="invalid-feedback">
-                                Valid first name is required.
-                            </div>
+                            <input type="text" name="brandName" [(ngModel)]="formData.brandName" class="form-control" id="firstName" placeholder="" value="" required="">
                         </div>
                         <div class="col-12 mb-3">
                             <label for="username" class="form-label text-light">Email</label>
                             <div class="input-group has-validation">
                                 <span class="input-group-text"><i class="fa-regular fa-envelope"></i></span>
-                                <input type="email" name="email" class="form-control" id="username" placeholder="name@example.com"
+                                <input type="email" name="email" [(ngModel)]="formData.email" class="form-control" id="username" placeholder="name@example.com"
                                     required="">
-                                <div class="invalid-feedback">
-                                    Your username is required.
-                                </div>
                             </div>
                         </div>
                         <div class="col-12 mb-3">
                             <label for="textarea1" class="form-label text-light">Message <small
                                     class="">(Optional)</small></label>
-                            <textarea class="form-control" name="message" placeholder="Leave us your comment" id="textarea1"
+                            <textarea class="form-control" [(ngModel)]="formData.message" name="message" placeholder="Leave us your comment" id="textarea1"
                                 rows="3"></textarea>
                         </div>
                         <hr class="my-4 text-light">
                         <div class="col-12  mb-4">
-                            <input type="checkbox" class="form-check-input" id="same-address">
-                            <label class="form-check-label ms-2 text-light" for="same-address">I have read and accept the
-                                privacy policy</label>
+                            <!-- <input type="checkbox" class="form-check-input" id="same-address"> -->
+                            <label class="form-check-label ms-2 text-danger fw-bold" for="same-address" *ngIf="invalidForm">You must complete these fields</label>
                         </div>
                         <div>
                             <input type="hidden" name="_template" value="table">
                             <input type="hidden" name="_cc" value="adam@conceptdrop.com">
                             <input type="hidden" name="_next" value="https://merchlife.co/thanks">
                         </div>
-                        <div class="d-flex justify-content-end">
-                            <button type="submit" class="btn-lets btn-lg px-4 me-md-2">Submit</button>
+                        <div class="d-flex justify-content-end" >
+                            <button type="submit" class="btn-lets btn-lg px-4 me-md-2" [disabled]="loading" (click)="onSubmit()">
+                                <span *ngIf="!loading">Submit</span>
+                                <span *ngIf="loading" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                            </button>
                         </div>
                     </form>
                 </div>

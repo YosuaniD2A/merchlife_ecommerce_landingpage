@@ -9,6 +9,8 @@ import { MarqueeComponent } from './components/marquee/marquee.component';
 import { MainComponent } from './components/main/main.component';
 import { ServicesComponent } from './components/main/services/services.component';
 import { ThanksComponent } from './components/thanks/thanks.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { ThanksComponent } from './components/thanks/thanks.component';
   ],
   imports: [
     AppRoutingModule,
-    BrowserModule
+    BrowserModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
